@@ -1,0 +1,53 @@
+{
+  "name": "banka-react",
+  "version": "1.0.0",
+  "description": "Banka is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint **/*.js",
+    "lint:fix": "prettier-eslint \"**/*.{js,json}\" --write",
+    "prettier": "prettier **/*.{js,json} --write",
+    "develop": "webpack --env.mode development --watch",
+    "build": "webpack --env.mode production",
+    "start:dev": "rm -rf client/dist && webpack-dev-server --env.mode development --open --hot"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kechyy/Banka-React.git"
+  },
+  "author": "Nkechi Ogbonna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kechyy/Banka-React/issues"
+  },
+  "homepage": "https://github.com/kechyy/Banka-React#readme",
+  "dependencies": {
+    "css-loader": "^3.1.0",
+    "file-loader": "^4.1.0",
+    "image-webpack-loader": "^5.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "style-loader": "^0.23.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.6",
+    "eslint": "^6.1.0",
+    "eslint-config-airbnb-base": "^13.2.0",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "html-webpack-plugin": "^3.2.0",
+    "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "webpack-dev-server": "^3.7.2"
+  }
+}
