@@ -46,4 +46,10 @@ node_modules
 .vscode
 dist
 
+#cypress
+cypress/fixtures
+cypress/plugins
+cypress/support
+examples
+
 
