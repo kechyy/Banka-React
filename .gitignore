@@ -52,4 +52,6 @@ cypress/plugins
 cypress/support
 examples
 
+junit.xml
+
 

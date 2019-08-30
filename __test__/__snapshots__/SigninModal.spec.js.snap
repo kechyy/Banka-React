@@ -1,0 +1,260 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signin component renders without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(SignInModal))
+        authAction={[MockFunction]}
+        closeModal={[MockFunction]}
+        error={null}
+        history={
+          Object {
+            "push": [MockFunction],
+          }
+        }
+        isAuthenticated={false}
+        location={
+          Object {
+            "url": "/user-dashboard",
+          }
+        }
+        modalToggle={[MockFunction]}
+        modalToggle2={[MockFunction]}
+        page="signin"
+        signinDisplay="block"
+        status=""
+      >
+        <Connect(SignInModal)
+          authAction={[MockFunction]}
+          closeModal={[MockFunction]}
+          error={null}
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          isAuthenticated={false}
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          modalToggle={[MockFunction]}
+          modalToggle2={[MockFunction]}
+          page="signin"
+          signinDisplay="block"
+          status=""
+        >
+          <SignInModal
+            authAction={[Function]}
+            closeModal={[Function]}
+            error={null}
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            isAuthenticated={false}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            modalToggle={[Function]}
+            modalToggle2={[Function]}
+            page=""
+            signinDisplay="none"
+            status=""
+          >
+            <div
+              className="modal"
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+            >
+              <div
+                className="modal-content"
+              >
+                <header>
+                  <a
+                    className="modal-close"
+                    href="javascript:;"
+                    onClick={[Function]}
+                    title="Close"
+                  >
+                    ×
+                  </a>
+                  <h1>
+                    LOGIN HERE
+                  </h1>
+                  <p>
+                    Enter your login credentials to access this application
+                  </p>
+                </header>
+                <form
+                  onSubmit={[Function]}
+                >
+                  <div
+                    className="modal-body"
+                  >
+                    <div
+                      className="row loginForm"
+                    >
+                      <label>
+                        Email Address
+                      </label>
+                      <div
+                        style={
+                          Object {
+                            "width": "100%",
+                          }
+                        }
+                      >
+                        <input
+                          className="input-block"
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="Enter email address"
+                          required={true}
+                          type="email"
+                        />
+                      </div>
+                      <label>
+                        Password
+                      </label>
+                      <div>
+                        <input
+                          className="input-block"
+                          id="password"
+                          minLength="6"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter password"
+                          required={true}
+                          type="password"
+                        />
+                      </div>
+                      <div
+                        className="col-12-xs col-12-lg col-12-sm"
+                      >
+                        <button
+                          className="btn btn-pink btn-full btnHover"
+                          type="submit"
+                        >
+                          Sign in
+                        </button>
+                        <br />
+                        <br />
+                        <a
+                          className="sign"
+                          href="javascript:;"
+                          onClick={[Function]}
+                        >
+                          Don't have an account? 
+                          <span
+                            className="btn-yellow-test"
+                          >
+                            [SIGN UP]
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </SignInModal>
+        </Connect(SignInModal)>
+      </withRouter(Connect(SignInModal))>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

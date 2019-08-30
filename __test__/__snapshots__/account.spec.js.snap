@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateAccount should render CreateAccount Component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(CreateAccount))
+        accountAction={[MockFunction]}
+        getAccountAction={[MockFunction]}
+        isAuthenticated={true}
+        userProfile={[MockFunction]}
+      >
+        <Connect(CreateAccount)
+          accountAction={[MockFunction]}
+          getAccountAction={[MockFunction]}
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          isAuthenticated={true}
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          userProfile={[MockFunction]}
+        >
+          <CreateAccount
+            account={Array []}
+            accountAction={[MockFunction]}
+            getAccountAction={[Function]}
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            isAuthenticated={true}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            userProfile={[MockFunction]}
+          >
+            <div>
+              <form
+                onSubmit={[Function]}
+              >
+                <div
+                  className="row createAcct"
+                >
+                  <div
+                    className="col-6-md col-12-xs"
+                  >
+                    <label
+                      htmlFor="true"
+                    >
+                      First Name
+                    </label>
+                    <input
+                      className="input-block"
+                      disabled={true}
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    className="col-6-md col-12-xs"
+                  >
+                    <label
+                      htmlFor="true"
+                    >
+                      Last Name
+                    </label>
+                    <input
+                      className="input-block"
+                      disabled={true}
+                      type="text"
+                    />
+                  </div>
+                  <div
+                    className="col-6-md col-12-xs"
+                  >
+                    <label
+                      htmlFor="true"
+                    >
+                      Email Address
+                    </label>
+                    <input
+                      className="input-block"
+                      disabled={true}
+                      type="email"
+                    />
+                  </div>
+                  <div
+                    className="col-6-md col-12-xs"
+                  >
+                    <label
+                      className="required"
+                      htmlFor="accountType"
+                    >
+                      Account type 
+                      <span>
+                        *
+                      </span>
+                    </label>
+                    <select
+                      className="input-block"
+                      id="type"
+                      name="type"
+                      onChange={[Function]}
+                      required={true}
+                    >
+                      <option
+                        value=""
+                      >
+                        --Select Account Type--
+                      </option>
+                      <option
+                        value="savings"
+                      >
+                        Savings
+                      </option>
+                      <option
+                        value="current"
+                      >
+                        Current
+                      </option>
+                    </select>
+                  </div>
+                  <div
+                    className="col-6-md col-12-xs"
+                  >
+                    <input
+                      className="btn btn-blue createAccountBtn"
+                      defaultValue="Create Account"
+                      id="createAccountBtn"
+                      type="submit"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div
+                className="row "
+              >
+                <div
+                  className="col-12-xs col-12-md table"
+                >
+                  <table
+                    cellPadding={0}
+                    cellSpacing={0}
+                  >
+                    <thead>
+                      <tr>
+                        <th>
+                          S/N
+                        </th>
+                        <th>
+                          Account Number
+                        </th>
+                        <th>
+                          Account type
+                        </th>
+                        <th>
+                          Account Balance
+                        </th>
+                        <th>
+                          Account Status
+                        </th>
+                        <th>
+                          Created Date
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody />
+                  </table>
+                </div>
+              </div>
+            </div>
+          </CreateAccount>
+        </Connect(CreateAccount)>
+      </withRouter(Connect(CreateAccount))>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
