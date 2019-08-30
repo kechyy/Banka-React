@@ -1,0 +1,308 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Signup component renders without crashing 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(SignUpModal))
+        authAction={[MockFunction]}
+        closeModal={[MockFunction]}
+        error={null}
+        history={
+          Object {
+            "push": [MockFunction],
+          }
+        }
+        isAuthenticated={false}
+        location={
+          Object {
+            "url": "/user-dashboard",
+          }
+        }
+        modalToggle={[MockFunction]}
+        modalToggle2={[MockFunction]}
+        page="signup"
+        signinDisplay="none"
+        signupDisplay="block"
+        status="rest"
+      >
+        <Connect(SignUpModal)
+          authAction={[MockFunction]}
+          closeModal={[MockFunction]}
+          error={null}
+          history={
+            Object {
+              "action": "POP",
+              "block": [Function],
+              "createHref": [Function],
+              "go": [Function],
+              "goBack": [Function],
+              "goForward": [Function],
+              "length": 1,
+              "listen": [Function],
+              "location": Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              },
+              "push": [Function],
+              "replace": [Function],
+            }
+          }
+          isAuthenticated={false}
+          location={
+            Object {
+              "hash": "",
+              "pathname": "/",
+              "search": "",
+              "state": undefined,
+            }
+          }
+          match={
+            Object {
+              "isExact": true,
+              "params": Object {},
+              "path": "/",
+              "url": "/",
+            }
+          }
+          modalToggle={[MockFunction]}
+          modalToggle2={[MockFunction]}
+          page="signup"
+          signinDisplay="none"
+          signupDisplay="block"
+          status="rest"
+        >
+          <SignUpModal
+            authAction={[Function]}
+            closeModal={[Function]}
+            error={null}
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            isAuthenticated={false}
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            modalToggle={[Function]}
+            modalToggle2={[Function]}
+            page=""
+            signinDisplay="none"
+            signupDisplay="none"
+            status="rest"
+          >
+            <div
+              className="modal"
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+            >
+              <div
+                className="modal-content"
+              >
+                <header>
+                  <a
+                    className="modal-close"
+                    href="javascript:;"
+                    onClick={[Function]}
+                    title="Close"
+                  >
+                    ×
+                  </a>
+                  <h1>
+                    USER SIGN UP PAGE
+                  </h1>
+                  <p>
+                    Enter Your Sign-Up Details To Create An Account
+                  </p>
+                </header>
+                <form
+                  onSubmit={[Function]}
+                >
+                  <div
+                    className="modal-body"
+                  >
+                    <div
+                      className="row loginForm"
+                    >
+                      <label>
+                        First Name
+                      </label>
+                      <div
+                        className="col-xs-12 col-sm-12 col-lg-12"
+                      >
+                        <input
+                          className="input-block"
+                          id="firstName"
+                          name="firstName"
+                          onChange={[Function]}
+                          placeholder="Enter first name"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <label>
+                        Last Name
+                      </label>
+                      <div
+                        className="col-xs-12 col-sm-12 col-lg-12"
+                      >
+                        <input
+                          className="input-block"
+                          id="lastName"
+                          name="lastName"
+                          onChange={[Function]}
+                          placeholder="Enter Last name"
+                          required={true}
+                          type="text"
+                        />
+                      </div>
+                      <label>
+                        Email Address
+                      </label>
+                      <div
+                        className="col-xs-12 col-sm-12"
+                      >
+                        <input
+                          className="input-block"
+                          id="email"
+                          name="email"
+                          onChange={[Function]}
+                          placeholder="Enter email address"
+                          required={true}
+                          type="email"
+                        />
+                      </div>
+                      <label>
+                        Password
+                      </label>
+                      <div
+                        className="col-xs-12 col-sm-12 col-lg-12"
+                      >
+                        <input
+                          className="input-block"
+                          id="password"
+                          name="password"
+                          onChange={[Function]}
+                          placeholder="Enter password"
+                          required={true}
+                          type="password"
+                        />
+                      </div>
+                      <label>
+                        Confirm Password
+                      </label>
+                      <div
+                        className="col-sx-12 col-sm-12 col-lg-12"
+                      >
+                        <input
+                          className="input-block"
+                          id="cpassword"
+                          name="cpassword"
+                          onChange={[Function]}
+                          placeholder="Enter password"
+                          required={true}
+                          type="password"
+                        />
+                      </div>
+                      <div
+                        className="col-xs-12 col-sm-12 col-lg-12"
+                      >
+                        <button
+                          className="btn btn-pink btn-full"
+                          type="submit"
+                        >
+                          Sign Up
+                        </button>
+                        <br />
+                        <br />
+                        <a
+                          className="sign"
+                          href="javascript:;"
+                          onClick={[Function]}
+                        >
+                          Don't have an account? 
+                          <span
+                            className="btn-yellow-test"
+                          >
+                            [SIGN IN]
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </SignUpModal>
+        </Connect(SignUpModal)>
+      </withRouter(Connect(SignUpModal))>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
