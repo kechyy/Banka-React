@@ -8,10 +8,13 @@
     "lint:fix": "prettier-eslint \"**/*.{js,json}\" --write",
     "prettier": "prettier **/*.{js,json} --write",
     "develop": "webpack --env.mode development --watch",
+    "heroku-postbuild": "npm run build",
     "start:dev": "rm -rf client/dist && webpack-dev-server --env.mode development --open --hot",
+    "build": "webpack --env.mode production",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
-    "coverage": "cat ./coverage.lcov.info | coveralls"
+    "coverage": "cat ./coverage.lcov.info | coveralls",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,12 +29,17 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.1.0",
+    "express": "^4.17.1",
     "file-loader": "^4.1.0",
     "image-webpack-loader": "^5.0.0",
     "jsonwebtoken": "^8.5.1",
     "jwt-decode": "^2.2.0",
+    "mini-css-extract-plugin": "^0.8.0",
     "moxios": "^0.4.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "purgecss-webpack-plugin": "^1.5.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.11",
     "react-dom": "^16.8.6",
@@ -42,7 +50,10 @@
     "redux-thunk": "^2.3.0",
     "style-loader": "^0.23.1",
     "toastr": "^2.1.4",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "webpack": "^4.38.0",
+    "webpack-cli": "^3.3.6",
+    "html-webpack-plugin": "^3.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
@@ -66,7 +77,6 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.3",
-    "html-webpack-plugin": "^3.2.0",
     "husky": "^3.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
@@ -79,8 +89,6 @@
     "prettier-eslint": "^9.0.0",
     "prettier-eslint-cli": "^5.0.0",
     "redux-mock-store": "^1.5.3",
-    "webpack": "^4.38.0",
-    "webpack-cli": "^3.3.6",
     "webpack-dev-server": "^3.7.2"
   }
 }
