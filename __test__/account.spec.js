@@ -128,12 +128,8 @@ describe('CreateAccount', () => {
     });
    
     wrapper.find('form').simulate('submit', event);
-    expect(wrapper.find('CreateAccount').state('content')).toEqual(undefined);
-
     expect(props.accountAction).toHaveBeenCalledWith({
-      
         type: 'savings',
-      
     });
   });
 });
