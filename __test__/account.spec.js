@@ -65,7 +65,6 @@ describe('CreateAccount', () => {
 
   it('should have 4 input on create account', () => {
     const wrapper = renderWithEnzymes();
-    // console.log('new wrapper >>', wrapper.debug());
 
     expect(wrapper.find('input').length).toBe(4);
     expect(

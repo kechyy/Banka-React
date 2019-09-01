@@ -1,63 +1,3 @@
-// import React from 'react';
-// import { Provider } from 'react-redux';
-// import configureStore from 'redux-mock-store';
-// import thunk from 'redux-thunk';
-// import Enzyme, { mount, shallow } from './enzyme';
-// import toJson from 'enzyme-to-json';
-// import SignUpModal from '../src/components/SignUpModal';
-
-// const createStore = (signinDisplay = 'none', signupDisplay = 'none', page = '') => {
-//   const content = {
-//     modalStatus: {
-//       signinDisplay: 'none',
-//       signupDisplay: 'none',
-//       page: ''
-//     }
-//   };
-//   const middlewares = [thunk];
-//   const mockStore = configureStore(middlewares);
-//   const store = mockStore({
-//     modalStatus: { ...content, signinDisplay, signupDisplay, page }
-//   });
-//   return store;
-// };
-
-
-// const props = {
-//   modalToggle: jest.fn(),
-//   modalToggle2: jest.fn(),
-//   closeModal: jest.fn(),
-//   page: 'signup'
-// };
-
-// describe.only('SignUp Modal', () => {  
-//   it('renders signup modal without crashing', () => {
-//     const Wrapper = mount(
-//             <Provider store={createStore()}>
-//               <SignUpModal {...props} />
-//             </Provider>
-//           );
-//     expect(wrapper.find('SignUpModal')).toBeTruthy();
-//     expect(wrapper.find('div')).toBeTruthy();
-//     expect(Wrapper.find('div').length).toBeGreaterThan(1);
-//     expect(toJson(Wrapper)).toMatchSnapshot();
-    
-//   })
-
-//   it('renders five input fields ', () => {
-//     const wrapper = setUp();
-//     expect(wrapper.find('input').length).toBe(5);
-//     expect(wrapper.find('input').at(0).props().type).toBe('text');
-//     expect(wrapper.find('input').at(1).props().type).toBe('text');
-//     expect(wrapper.find('input').at(2).props().type).toBe('email');
-//     expect(wrapper.find('input').at(3).props().type).toBe('password');
-//     expect(wrapper.find('input').at(4).props().type).toBe('password');
-//     expect(wrapper.find('button').length).toBe(1);
-//     expect(wrapper.find('button').at(0).props().type).toBe('submit');
-//   });
-// })
-
-
 import React from 'react';
 import { mount, shallow } from './enzyme';
 import toJson from 'enzyme-to-json';
@@ -114,12 +54,7 @@ const props = {
 
 
 describe('Signup component', () => {
-  beforeEach(() => {
-    location = {
-      search: `token=${userToken}`,
-      url: '/'
-    };
-  });
+ 
   it('renders without crashing', () => {
    const wrapper =renderWithEnzymes();
 

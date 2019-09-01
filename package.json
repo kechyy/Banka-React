@@ -13,7 +13,7 @@
     "build": "webpack --env.mode production",
     "test": "jest --coverage",
     "test:watch": "jest --watch --coverage",
-    "coverage": "cat ./coverage.lcov.info | coveralls",
+    "coverage": "cat ./coverage/lcov.info | coveralls",
     "start": "node server.js"
   },
   "repository": {

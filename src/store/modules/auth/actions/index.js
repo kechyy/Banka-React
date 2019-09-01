@@ -64,7 +64,6 @@ export const authAction = ({
 
     return url ? history.push(url) : history.push('/');
   } catch (error) {
-    console.log(error.response)
     const message = error.response
       ? error.response.data.error
       : `${error.message}. It appears you're offline`;
