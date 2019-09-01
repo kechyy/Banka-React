@@ -15,6 +15,12 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: './src/index.html',
       inject: 'body'
+    }),
+    new Dotenv(),
+    new webpack.DefinePlugin({
+      'process.env': {
+        API_BASE_URL: JSON.stringify(process.env.API_BASE_URL),
+      }
     })
   ],
   module: {
@@ -28,7 +34,10 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        use: [
+          'style-loader',
+          'css-loader'
+      ]
       },
       {
         test: /\.(gif|png|jpg|jpe?g|svg)$/i,
