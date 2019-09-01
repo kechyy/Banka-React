@@ -51,6 +51,7 @@ exports[`Signin component renders without crashing 1`] = `
             "url": "/user-dashboard",
           }
         }
+        loginAction={[MockFunction]}
         modalToggle={[MockFunction]}
         modalToggle2={[MockFunction]}
         page="signin"
@@ -90,6 +91,7 @@ exports[`Signin component renders without crashing 1`] = `
               "state": undefined,
             }
           }
+          loginAction={[MockFunction]}
           match={
             Object {
               "isExact": true,
@@ -137,6 +139,7 @@ exports[`Signin component renders without crashing 1`] = `
                 "state": undefined,
               }
             }
+            loginAction={[MockFunction]}
             match={
               Object {
                 "isExact": true,

@@ -87,4 +87,53 @@ describe('Signup component', () => {
     expect(wrapper.find('button').length).toBe(1);
     expect(wrapper.find('button').at(0).props().type).toBe('submit');
   });
+
+  it('should submit a valid form', () => {
+    const wrapper = renderWithEnzymes();
+    const event = {
+      preventDefault: jest.fn()
+    };
+    const typeInputFirstName = wrapper.find("input[name='firstName']");
+    typeInputFirstName.simulate('change', {
+      target: {
+        name: 'firstName',
+        value: 'Nkechi'
+      }
+    });
+    const typeInputlastName = wrapper.find("input[name='lastName']");
+    typeInputlastName.simulate('change', {
+      target: {
+        name: 'lastName',
+        value: 'Ogbonna'
+      }
+    });
+    const typeInputEmail = wrapper.find("input[name='email']");
+    typeInputEmail.simulate('change', {
+      target: {
+        name: 'email',
+        value: 'kech@gmail.com'
+      }
+    });
+    const typeInputPassword = wrapper.find("input[name='password']");
+    typeInputPassword.simulate('change', {
+      target: {
+        name: 'password',
+        value: 'kech@123'
+      }
+    });
+    const typeInputCPassword = wrapper.find("input[name='cpassword']");
+    typeInputCPassword.simulate('change', {
+      target: {
+        name: 'cpassword',
+        value: 'kech@123'
+      }
+    });
+    
+    wrapper.find('form').simulate('submit', event);
+    expect(wrapper.find('SignUpModal').state('firstName')).toEqual('Nkechi');
+    expect(wrapper.find('SignUpModal').state('lastName')).toEqual('Ogbonna');
+    expect(wrapper.find('SignUpModal').state('email')).toEqual('kech@gmail.com');
+    expect(wrapper.find('SignUpModal').state('password')).toEqual('kech@123');
+    expect(wrapper.find('SignUpModal').state('cpassword')).toEqual('kech@123');
+  });
 })

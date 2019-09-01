@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 import { modalToggle, modalToggle2, closeModal } from '../store/modules/modals/actions';
 import { authAction } from '../store/modules/auth/actions';
 import checkUserType from '../utils/checkUserType'
@@ -42,7 +42,7 @@ class SignInModal extends Component {
     const {
       history
     } = this.props;
-    const url = checkUserType();
+    const url = '/client';
     loginAction({ userData: { email, password, }, history, url });
   }
 
@@ -62,7 +62,10 @@ class SignInModal extends Component {
     const {
       errors: { email: emailError, password: passwordError }
     } = this.state;
-    const { signinDisplay, closeModal, modalToggle2 } = this.props
+    const { signinDisplay, closeModal, modalToggle2, isAuthenticated,
+      location: { url }
+    } = this.props;
+    if (isAuthenticated) return <Redirect to={url || '/'} />;
     return (
       <div className="modal" style={{display: signinDisplay}}>
         <div className="modal-content">

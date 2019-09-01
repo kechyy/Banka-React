@@ -75,7 +75,7 @@ export const getAccountAction = () => async dispatch => {
     const message = error.response
       ? error.response.data.error
       : `${error.message}. It appears you're offline`;
-    Toastr.error(message);
+    // Toastr.error(message);
   }
 };
 

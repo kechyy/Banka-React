@@ -50,7 +50,7 @@ class SignUpModal extends Component {
     const {
       history
     } = this.props;
-    const  url = checkUserType();
+    const  url = '/client';
     // this.setState({ submittting: true });
     signinAction({ userData: { firstName, lastName, email, password, cpassword }, history, url });
   }

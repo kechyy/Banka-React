@@ -73,8 +73,7 @@ class Client extends Component {
           <div className="wrapper">
             <div className="container topHeader">
               <div className="row" style={{justifyContent: 'flex-end'}}>
-                <Link to="/" className="logout btn btn-pink" id="logout">HOME</Link>
-                <button className="logout btn btn-pink" id="logout">LOGOUT</button>
+                <Link to='/' className="logout btn btn-pink" id="logout" onClick={this.props.logoutAction}>LOGOUT</Link>
                 
                 <button className="topMenu btn btn-red" style={{padding:'10px'}} onClick={this.toggletopMenu}>Menu</button>
                     <ul className="dropDown" style={{display:menuToggle}}>

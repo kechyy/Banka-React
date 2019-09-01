@@ -9,6 +9,22 @@ import { mount, shallow } from './enzyme';
 import SignInModal from '../src/components/SignInModal';
 
 const mockStore = configureMockStore([thunk]);
+
+const props = {
+  authAction: jest.fn(),
+  status: '',
+  isAuthenticated: false,
+  error: null,
+  location: { url: '/user-dashboard' },
+  history: { push: jest.fn() },
+  closeModal:jest.fn(),
+  modalToggle2:jest.fn(),
+  modalToggle:jest.fn(),
+  signinDisplay:'block',
+  page:'signin',
+  loginAction: jest.fn()
+
+};
 const renderWithEnzymes = state => {
   const store = mockStore({
     authReducer: {
@@ -35,20 +51,7 @@ const renderWithEnzymes = state => {
   );
 };
 
-const props = {
-  authAction: jest.fn(),
-  status: '',
-  isAuthenticated: false,
-  error: null,
-  location: { url: '/user-dashboard' },
-  history: { push: jest.fn() },
-  closeModal:jest.fn(),
-  modalToggle2:jest.fn(),
-  modalToggle:jest.fn(),
-  signinDisplay:'block',
-  page:'signin'
 
-};
 
 
 describe('Signin component', () => {
@@ -75,13 +78,35 @@ describe('Signin component', () => {
 
   it('renders 2 input fields and 1 submit button', () => {
     const wrapper = renderWithEnzymes();
-
     expect(wrapper.find('input').length).toBe(2);
     expect(wrapper.find('input').at(0).props().type).toBe('email');
     expect(wrapper.find('input').at(1).props().type).toBe('password');
     expect(wrapper.find('button').length).toBe(1);
     expect(wrapper.find('button').at(0).props().type).toBe('submit');
-
-    
   });
+  it('should submit a valid form', () => {
+    const wrapper = renderWithEnzymes();
+    const event = {
+      preventDefault: jest.fn()
+    };
+    const typeInputEmail = wrapper.find("input[name='email']");
+    typeInputEmail.simulate('change', {
+      target: {
+        name: 'email',
+        value: 'kech@gmail.com'
+      }
+    });
+    const typeInputPassword = wrapper.find("input[name='password']");
+    typeInputPassword.simulate('change', {
+      target: {
+        name: 'password',
+        value: 'kech@123'
+      }
+    });
+    
+    wrapper.find('form').simulate('submit', event);
+    expect(wrapper.find('SignInModal').state('email')).toEqual('kech@gmail.com');
+    expect(wrapper.find('SignInModal').state('password')).toEqual('kech@123');
+  });
+  
 });
