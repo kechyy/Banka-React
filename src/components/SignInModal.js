@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter, Redirect } from 'react-router-dom';
+import { withRouter, Redirect, Link } from 'react-router-dom';
 import { modalToggle, modalToggle2, closeModal } from '../store/modules/modals/actions';
 import { authAction } from '../store/modules/auth/actions';
 import checkUserType from '../utils/checkUserType'
@@ -21,7 +21,9 @@ class SignInModal extends Component {
       }
     };
   }
-
+  componentDidMount() {
+    document.body.style.background = 'none';
+  }
   handleSubmit(e) {
     e.preventDefault();
     const { email, password } = this.state;
@@ -42,7 +44,7 @@ class SignInModal extends Component {
     const {
       history
     } = this.props;
-    const url = '/client';
+    const url = '/user-profile';
     loginAction({ userData: { email, password, }, history, url });
   }
 
@@ -67,10 +69,10 @@ class SignInModal extends Component {
     } = this.props;
     if (isAuthenticated) return <Redirect to={url || '/'} />;
     return (
-      <div className="modal" style={{display: signinDisplay}}>
+      <div className="modal">
         <div className="modal-content">
           <header>
-            <a href="javascript:;" title="Close" className="modal-close" onClick={closeModal}>&times;</a>
+            
             <h1>LOGIN HERE</h1>
             <p>Enter your login credentials to access this application</p>
           </header>
@@ -91,7 +93,7 @@ class SignInModal extends Component {
                    id="password" placeholder="Enter password" onChange={this.handleInputFieldChange} />
                 </div>
                 <div className="col-12-xs col-12-lg col-12-sm"><button className="btn btn-pink btn-full btnHover" type="submit">Sign in</button><br/><br/>
-                  <a href="javascript:;" className="sign" onClick={modalToggle2}>Don't have an account? <span  className="btn-yellow-test">[SIGN UP]</span></a>
+                  <Link to='/signup' className="sign">Don't have an account? <span  className="btn-yellow-test">[SIGN UP]</span></Link>
                 </div>
               </div>
             </div>

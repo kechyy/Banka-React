@@ -3,7 +3,6 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import { mount, shallow } from './enzyme';
 import CreateAccount from '../src/components/CreateAccount';
-// import CreateAccount from '../src/components/CreateAccount';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import toJson from 'enzyme-to-json';
 import { BrowserRouter, Switch } from 'react-router-dom';
@@ -127,8 +126,7 @@ describe('CreateAccount', () => {
     });
    
     wrapper.find('form').simulate('submit', event);
-    expect(props.accountAction).toHaveBeenCalledWith({
-        type: 'savings',
-    });
+    expect(wrapper.find('CreateAccount').state('type')).toEqual('savings');
+
   });
 });

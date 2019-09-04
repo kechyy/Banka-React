@@ -2,9 +2,7 @@ import React from 'react';
 import { mount, shallow } from './enzyme';
 import toJson from 'enzyme-to-json';
 import App from '../src/components/App';
-import HomeContent from '../src/components/HomeContent';
-import { Provider } from 'react-redux';
-import store from '../src/store';
+
 
 
 

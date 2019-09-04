@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideBar should render SideBar Component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Connect(SideBar)
+        isAuthenticated={true}
+        profileAction={[MockFunction]}
+        userProfile={[MockFunction]}
+      >
+        <SideBar
+          account={Array []}
+          getTransactionAction={[Function]}
+          isAuthenticated={true}
+          profileAction={[MockFunction]}
+          userProfile={Object {}}
+        >
+          <div
+            className="left mainSideBar"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="col-8-lg sideBar"
+              >
+                <aside>
+                  <div>
+                    <img
+                      alt=""
+                      className="logo"
+                      src="../images/logo2.png"
+                    />
+                  </div>
+                  <div
+                    className="sideBarTitle"
+                  >
+                    Client User
+                  </div>
+                  <ul
+                    className="sideMenu"
+                  >
+                    <li
+                      className="userProfiles"
+                    >
+                      -  
+                      <Link
+                        data-title="Profile Details"
+                        to="/user-profile"
+                      >
+                        <a
+                          data-title="Profile Details"
+                          href="/user-profile"
+                          onClick={[Function]}
+                        >
+                          Profile
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="accountForms"
+                    >
+                      <span
+                        className="fa fa-book"
+                      />
+                      <Link
+                        data-title="Create Account"
+                        to="/create-account"
+                      >
+                        <a
+                          data-title="Create Account"
+                          href="/create-account"
+                          onClick={[Function]}
+                        >
+                          Create Bank Account
+                        </a>
+                      </Link>
+                    </li>
+                    <li
+                      className="transact"
+                    >
+                      -  
+                      <a
+                        onClick={[Function]}
+                      >
+                        Transaction History
+                      </a>
+                      <ul
+                        className="sideBarDropDown"
+                        style={
+                          Object {
+                            "display": "none",
+                          }
+                        }
+                      />
+                    </li>
+                  </ul>
+                </aside>
+              </div>
+            </div>
+          </div>
+        </SideBar>
+      </Connect(SideBar)>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

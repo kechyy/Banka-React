@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { modalToggle, modalToggle2, closeModal} from '../store/modules/modals/actions';
 import { authAction } from '../store/modules/auth/actions';
 import checkUserType from '../utils/checkUserType'
@@ -50,7 +50,7 @@ class SignUpModal extends Component {
     const {
       history
     } = this.props;
-    const  url = '/client';
+    const  url = '/user-profile';
     // this.setState({ submittting: true });
     signinAction({ userData: { firstName, lastName, email, password, cpassword }, history, url });
   }
@@ -76,10 +76,9 @@ class SignUpModal extends Component {
     const {closeModal, signupDisplay, page, modalToggle, modalToggle2 } = this.props;
     
     return (
-      <div className="modal" style={{display: signupDisplay}}>
+      <div className="modal">
         <div className="modal-content">
           <header>
-            <a href="javascript:;" title="Close" className="modal-close" onClick={closeModal}>&times;</a>
             <h1>USER SIGN UP PAGE</h1>
             <p>Enter Your Sign-Up Details To Create An Account</p>
           </header>
@@ -129,7 +128,7 @@ class SignUpModal extends Component {
                 <div className="col-xs-12 col-sm-12 col-lg-12">
                 <button className="btn btn-pink btn-full"  type="submit" >Sign Up</button><br/>
                 <br/>
-                <a href="javascript:;" className="sign" onClick={modalToggle}>Don't have an account? <span  className="btn-yellow-test">[SIGN IN]</span></a>
+                <Link to='/signin' className="sign">Don't have an account? <span  className="btn-yellow-test">[SIGN IN]</span></Link>
               </div>
             </div>
           </div> 

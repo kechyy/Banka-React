@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Signup component renders without crashing 1`] = `
+exports[`Signin component renders without crashing 1`] = `
 <Provider
   store={
     Object {
@@ -36,7 +36,7 @@ exports[`Signup component renders without crashing 1`] = `
         }
       }
     >
-      <withRouter(Connect(SignUpModal))
+      <withRouter(Connect(SignInModal))
         authAction={[MockFunction]}
         closeModal={[MockFunction]}
         error={null}
@@ -51,14 +51,14 @@ exports[`Signup component renders without crashing 1`] = `
             "url": "/user-dashboard",
           }
         }
+        loginAction={[MockFunction]}
         modalToggle={[MockFunction]}
         modalToggle2={[MockFunction]}
-        page="signup"
-        signinDisplay="none"
-        signupDisplay="block"
-        status="rest"
+        page="signin"
+        signinDisplay="block"
+        status=""
       >
-        <Connect(SignUpModal)
+        <Connect(SignInModal)
           authAction={[MockFunction]}
           closeModal={[MockFunction]}
           error={null}
@@ -91,6 +91,7 @@ exports[`Signup component renders without crashing 1`] = `
               "state": undefined,
             }
           }
+          loginAction={[MockFunction]}
           match={
             Object {
               "isExact": true,
@@ -101,12 +102,11 @@ exports[`Signup component renders without crashing 1`] = `
           }
           modalToggle={[MockFunction]}
           modalToggle2={[MockFunction]}
-          page="signup"
-          signinDisplay="none"
-          signupDisplay="block"
-          status="rest"
+          page="signin"
+          signinDisplay="block"
+          status=""
         >
-          <SignUpModal
+          <SignInModal
             authAction={[Function]}
             closeModal={[Function]}
             error={null}
@@ -139,6 +139,7 @@ exports[`Signup component renders without crashing 1`] = `
                 "state": undefined,
               }
             }
+            loginAction={[MockFunction]}
             match={
               Object {
                 "isExact": true,
@@ -151,34 +152,20 @@ exports[`Signup component renders without crashing 1`] = `
             modalToggle2={[Function]}
             page=""
             signinDisplay="none"
-            signupDisplay="none"
-            status="rest"
+            status=""
           >
             <div
               className="modal"
-              style={
-                Object {
-                  "display": "none",
-                }
-              }
             >
               <div
                 className="modal-content"
               >
                 <header>
-                  <a
-                    className="modal-close"
-                    href="javascript:;"
-                    onClick={[Function]}
-                    title="Close"
-                  >
-                    ×
-                  </a>
                   <h1>
-                    USER SIGN UP PAGE
+                    LOGIN HERE
                   </h1>
                   <p>
-                    Enter Your Sign-Up Details To Create An Account
+                    Enter your login credentials to access this application
                   </p>
                 </header>
                 <form
@@ -191,42 +178,14 @@ exports[`Signup component renders without crashing 1`] = `
                       className="row loginForm"
                     >
                       <label>
-                        First Name
-                      </label>
-                      <div
-                        className="col-xs-12 col-sm-12 col-lg-12"
-                      >
-                        <input
-                          className="input-block"
-                          id="firstName"
-                          name="firstName"
-                          onChange={[Function]}
-                          placeholder="Enter first name"
-                          required={true}
-                          type="text"
-                        />
-                      </div>
-                      <label>
-                        Last Name
-                      </label>
-                      <div
-                        className="col-xs-12 col-sm-12 col-lg-12"
-                      >
-                        <input
-                          className="input-block"
-                          id="lastName"
-                          name="lastName"
-                          onChange={[Function]}
-                          placeholder="Enter Last name"
-                          required={true}
-                          type="text"
-                        />
-                      </div>
-                      <label>
                         Email Address
                       </label>
                       <div
-                        className="col-xs-12 col-sm-12"
+                        style={
+                          Object {
+                            "width": "100%",
+                          }
+                        }
                       >
                         <input
                           className="input-block"
@@ -241,12 +200,11 @@ exports[`Signup component renders without crashing 1`] = `
                       <label>
                         Password
                       </label>
-                      <div
-                        className="col-xs-12 col-sm-12 col-lg-12"
-                      >
+                      <div>
                         <input
                           className="input-block"
                           id="password"
+                          minLength="6"
                           name="password"
                           onChange={[Function]}
                           placeholder="Enter password"
@@ -254,54 +212,43 @@ exports[`Signup component renders without crashing 1`] = `
                           type="password"
                         />
                       </div>
-                      <label>
-                        Confirm Password
-                      </label>
                       <div
-                        className="col-sx-12 col-sm-12 col-lg-12"
-                      >
-                        <input
-                          className="input-block"
-                          id="cpassword"
-                          name="cpassword"
-                          onChange={[Function]}
-                          placeholder="Enter password"
-                          required={true}
-                          type="password"
-                        />
-                      </div>
-                      <div
-                        className="col-xs-12 col-sm-12 col-lg-12"
+                        className="col-12-xs col-12-lg col-12-sm"
                       >
                         <button
-                          className="btn btn-pink btn-full"
+                          className="btn btn-pink btn-full btnHover"
                           type="submit"
                         >
-                          Sign Up
+                          Sign in
                         </button>
                         <br />
                         <br />
-                        <a
+                        <Link
                           className="sign"
-                          href="javascript:;"
-                          onClick={[Function]}
+                          to="/signup"
                         >
-                          Don't have an account? 
-                          <span
-                            className="btn-yellow-test"
+                          <a
+                            className="sign"
+                            href="/signup"
+                            onClick={[Function]}
                           >
-                            [SIGN IN]
-                          </span>
-                        </a>
+                            Don't have an account? 
+                            <span
+                              className="btn-yellow-test"
+                            >
+                              [SIGN UP]
+                            </span>
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
                 </form>
               </div>
             </div>
-          </SignUpModal>
-        </Connect(SignUpModal)>
-      </withRouter(Connect(SignUpModal))>
+          </SignInModal>
+        </Connect(SignInModal)>
+      </withRouter(Connect(SignInModal))>
     </Router>
   </BrowserRouter>
 </Provider>

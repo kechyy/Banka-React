@@ -261,13 +261,20 @@ exports[`Sample Test Should render App without crashing 1`] = `
                                   >
                                     Banka is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
                                   </p>
-                                  <button
+                                  <Link
                                     className="btn btn-full btn-blue "
                                     id="sign_in"
-                                    onClick={[Function]}
+                                    to="/signin"
                                   >
-                                    SIGN-IN
-                                  </button>
+                                    <a
+                                      className="btn btn-full btn-blue "
+                                      href="/signin"
+                                      id="sign_in"
+                                      onClick={[Function]}
+                                    >
+                                      SIGN-IN
+                                    </a>
+                                  </Link>
                                 </div>
                               </div>
                             </div>
@@ -296,192 +303,6 @@ exports[`Sample Test Should render App without crashing 1`] = `
                             </div>
                           </footer>
                         </HomeFooter>
-                        <withRouter(Connect(SignInModal))>
-                          <Connect(SignInModal)
-                            history={
-                              Object {
-                                "action": "POP",
-                                "block": [Function],
-                                "createHref": [Function],
-                                "go": [Function],
-                                "goBack": [Function],
-                                "goForward": [Function],
-                                "length": 1,
-                                "listen": [Function],
-                                "location": Object {
-                                  "hash": "",
-                                  "pathname": "/",
-                                  "search": "",
-                                  "state": undefined,
-                                },
-                                "push": [Function],
-                                "replace": [Function],
-                              }
-                            }
-                            location={
-                              Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              }
-                            }
-                            match={
-                              Object {
-                                "isExact": true,
-                                "params": Object {},
-                                "path": "/",
-                                "url": "/",
-                              }
-                            }
-                          >
-                            <SignInModal
-                              authAction={[Function]}
-                              closeModal={[Function]}
-                              history={
-                                Object {
-                                  "action": "POP",
-                                  "block": [Function],
-                                  "createHref": [Function],
-                                  "go": [Function],
-                                  "goBack": [Function],
-                                  "goForward": [Function],
-                                  "length": 1,
-                                  "listen": [Function],
-                                  "location": Object {
-                                    "hash": "",
-                                    "pathname": "/",
-                                    "search": "",
-                                    "state": undefined,
-                                  },
-                                  "push": [Function],
-                                  "replace": [Function],
-                                }
-                              }
-                              location={
-                                Object {
-                                  "hash": "",
-                                  "pathname": "/",
-                                  "search": "",
-                                  "state": undefined,
-                                }
-                              }
-                              match={
-                                Object {
-                                  "isExact": true,
-                                  "params": Object {},
-                                  "path": "/",
-                                  "url": "/",
-                                }
-                              }
-                              modalToggle={[Function]}
-                              modalToggle2={[Function]}
-                              page=""
-                              signinDisplay="none"
-                            >
-                              <div
-                                className="modal"
-                                style={
-                                  Object {
-                                    "display": "none",
-                                  }
-                                }
-                              >
-                                <div
-                                  className="modal-content"
-                                >
-                                  <header>
-                                    <a
-                                      className="modal-close"
-                                      href="javascript:;"
-                                      onClick={[Function]}
-                                      title="Close"
-                                    >
-                                      ×
-                                    </a>
-                                    <h1>
-                                      LOGIN HERE
-                                    </h1>
-                                    <p>
-                                      Enter your login credentials to access this application
-                                    </p>
-                                  </header>
-                                  <form
-                                    onSubmit={[Function]}
-                                  >
-                                    <div
-                                      className="modal-body"
-                                    >
-                                      <div
-                                        className="row loginForm"
-                                      >
-                                        <label>
-                                          Email Address
-                                        </label>
-                                        <div
-                                          style={
-                                            Object {
-                                              "width": "100%",
-                                            }
-                                          }
-                                        >
-                                          <input
-                                            className="input-block"
-                                            id="email"
-                                            name="email"
-                                            onChange={[Function]}
-                                            placeholder="Enter email address"
-                                            required={true}
-                                            type="email"
-                                          />
-                                        </div>
-                                        <label>
-                                          Password
-                                        </label>
-                                        <div>
-                                          <input
-                                            className="input-block"
-                                            id="password"
-                                            minLength="6"
-                                            name="password"
-                                            onChange={[Function]}
-                                            placeholder="Enter password"
-                                            required={true}
-                                            type="password"
-                                          />
-                                        </div>
-                                        <div
-                                          className="col-12-xs col-12-lg col-12-sm"
-                                        >
-                                          <button
-                                            className="btn btn-pink btn-full btnHover"
-                                            type="submit"
-                                          >
-                                            Sign in
-                                          </button>
-                                          <br />
-                                          <br />
-                                          <a
-                                            className="sign"
-                                            href="javascript:;"
-                                            onClick={[Function]}
-                                          >
-                                            Don't have an account? 
-                                            <span
-                                              className="btn-yellow-test"
-                                            >
-                                              [SIGN UP]
-                                            </span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </form>
-                                </div>
-                              </div>
-                            </SignInModal>
-                          </Connect(SignInModal)>
-                        </withRouter(Connect(SignInModal))>
                       </div>
                     </Home>
                   </Connect(Home)>
@@ -757,13 +578,20 @@ exports[`Sample Test should render home without crashing 1`] = `
                                   >
                                     Banka is a light-weight core banking application that powers banking operations like account creation, customer deposit and withdrawals.
                                   </p>
-                                  <button
+                                  <Link
                                     className="btn btn-full btn-blue "
                                     id="sign_in"
-                                    onClick={[Function]}
+                                    to="/signin"
                                   >
-                                    SIGN-IN
-                                  </button>
+                                    <a
+                                      className="btn btn-full btn-blue "
+                                      href="/signin"
+                                      id="sign_in"
+                                      onClick={[Function]}
+                                    >
+                                      SIGN-IN
+                                    </a>
+                                  </Link>
                                 </div>
                               </div>
                             </div>
@@ -792,192 +620,6 @@ exports[`Sample Test should render home without crashing 1`] = `
                             </div>
                           </footer>
                         </HomeFooter>
-                        <withRouter(Connect(SignInModal))>
-                          <Connect(SignInModal)
-                            history={
-                              Object {
-                                "action": "POP",
-                                "block": [Function],
-                                "createHref": [Function],
-                                "go": [Function],
-                                "goBack": [Function],
-                                "goForward": [Function],
-                                "length": 1,
-                                "listen": [Function],
-                                "location": Object {
-                                  "hash": "",
-                                  "pathname": "/",
-                                  "search": "",
-                                  "state": undefined,
-                                },
-                                "push": [Function],
-                                "replace": [Function],
-                              }
-                            }
-                            location={
-                              Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              }
-                            }
-                            match={
-                              Object {
-                                "isExact": true,
-                                "params": Object {},
-                                "path": "/",
-                                "url": "/",
-                              }
-                            }
-                          >
-                            <SignInModal
-                              authAction={[Function]}
-                              closeModal={[Function]}
-                              history={
-                                Object {
-                                  "action": "POP",
-                                  "block": [Function],
-                                  "createHref": [Function],
-                                  "go": [Function],
-                                  "goBack": [Function],
-                                  "goForward": [Function],
-                                  "length": 1,
-                                  "listen": [Function],
-                                  "location": Object {
-                                    "hash": "",
-                                    "pathname": "/",
-                                    "search": "",
-                                    "state": undefined,
-                                  },
-                                  "push": [Function],
-                                  "replace": [Function],
-                                }
-                              }
-                              location={
-                                Object {
-                                  "hash": "",
-                                  "pathname": "/",
-                                  "search": "",
-                                  "state": undefined,
-                                }
-                              }
-                              match={
-                                Object {
-                                  "isExact": true,
-                                  "params": Object {},
-                                  "path": "/",
-                                  "url": "/",
-                                }
-                              }
-                              modalToggle={[Function]}
-                              modalToggle2={[Function]}
-                              page=""
-                              signinDisplay="none"
-                            >
-                              <div
-                                className="modal"
-                                style={
-                                  Object {
-                                    "display": "none",
-                                  }
-                                }
-                              >
-                                <div
-                                  className="modal-content"
-                                >
-                                  <header>
-                                    <a
-                                      className="modal-close"
-                                      href="javascript:;"
-                                      onClick={[Function]}
-                                      title="Close"
-                                    >
-                                      ×
-                                    </a>
-                                    <h1>
-                                      LOGIN HERE
-                                    </h1>
-                                    <p>
-                                      Enter your login credentials to access this application
-                                    </p>
-                                  </header>
-                                  <form
-                                    onSubmit={[Function]}
-                                  >
-                                    <div
-                                      className="modal-body"
-                                    >
-                                      <div
-                                        className="row loginForm"
-                                      >
-                                        <label>
-                                          Email Address
-                                        </label>
-                                        <div
-                                          style={
-                                            Object {
-                                              "width": "100%",
-                                            }
-                                          }
-                                        >
-                                          <input
-                                            className="input-block"
-                                            id="email"
-                                            name="email"
-                                            onChange={[Function]}
-                                            placeholder="Enter email address"
-                                            required={true}
-                                            type="email"
-                                          />
-                                        </div>
-                                        <label>
-                                          Password
-                                        </label>
-                                        <div>
-                                          <input
-                                            className="input-block"
-                                            id="password"
-                                            minLength="6"
-                                            name="password"
-                                            onChange={[Function]}
-                                            placeholder="Enter password"
-                                            required={true}
-                                            type="password"
-                                          />
-                                        </div>
-                                        <div
-                                          className="col-12-xs col-12-lg col-12-sm"
-                                        >
-                                          <button
-                                            className="btn btn-pink btn-full btnHover"
-                                            type="submit"
-                                          >
-                                            Sign in
-                                          </button>
-                                          <br />
-                                          <br />
-                                          <a
-                                            className="sign"
-                                            href="javascript:;"
-                                            onClick={[Function]}
-                                          >
-                                            Don't have an account? 
-                                            <span
-                                              className="btn-yellow-test"
-                                            >
-                                              [SIGN UP]
-                                            </span>
-                                          </a>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </form>
-                                </div>
-                              </div>
-                            </SignInModal>
-                          </Connect(SignInModal)>
-                        </withRouter(Connect(SignInModal))>
                       </div>
                     </Home>
                   </Connect(Home)>

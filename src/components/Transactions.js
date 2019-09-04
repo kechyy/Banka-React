@@ -1,43 +1,75 @@
-import React from 'react';
-const Transactions = ({transaction}) => {
-  return (
-    <div className="row" >
-      <div className="col-12-xs col-12-md table">
-        <table cellPadding={0} cellSpacing={0}>
-          <thead>,
-          
-           
-            <tr>
-              <th>Date</th>
-              <th>Transaction ID</th>
-              <th>Transaction type</th>
-              <th>Transaction amount</th>
-              <th>Old Balance</th>
-              <th>New Balance</th>
-              <th>Action</th>
-            </tr>
-          </thead><tbody>
-          {transaction.length > 0?
-            <tr>
-              <td className="responsiveTitle">Date</td>
-              <td>t.data.transaction_date</td>
-              <td>Previous Balance</td>
-              <td className="responsiveTitle">Transaction ID</td>
-              <td>t.data.transaction_id</td>
-              <td className="responsiveTitle">Transaction type</td>
-              <td>t.data.transaction_type</td>
-              <td className="responsiveTitle">Transaction amount</td>
-              <td>t.data.amount</td>
-              <td className="responsiveTitle">Old Balance</td>
-              <td>t.data.old_balance</td>
-              <td className="responsiveTitle">Old Balance</td>
-              <td>t.data.new_balance</td>
-            </tr>
-            : <tr><td className="text-red" style={{textAlign: 'center'}} colSpan="14">No transaction found</td></tr> }
-          </tbody>
-        </table>
-      </div>
-    </div>
-  )
+import React, {Component} from 'react';
+import {connect} from 'react-redux';
+import SideBar from './SideBar';
+import MainFooter from './MainFooter';
+import MainHeader from './MainHeader';
+
+class Transactions extends Component {
+  constructor() {
+    super();
+    this.state = {title: 'Account Transaction'}
+  }
+  componentDidMount () {
+    document.body.className = 'main-body';
+  }
+  render() {
+    return (
+      <div>
+          <MainHeader />
+          <main>
+            <div className="wrapper ">
+              <SideBar />
+              <div className="right">
+                <div className="row">
+                  <div className="col-12-lg mainContent">
+                    <h2 id="contentMainTitle" >Account Transaction Page</h2>
+                    <header className="mainTitle">
+                      <div className="row ">
+                        <div className="col-12-md">
+                          <h3 id="contentSubTitle" >{this.state.title}</h3>
+                        </div>
+                      </div>
+                    </header>
+                    <aside className="rightSideBar">
+                      <div className="row" id="userMain">
+                        <div style={{'width':'100%'}} >
+                          <div className="col-8-md acctDetails">
+                          <div className="row" >
+                              <div className="col-12-xs col-12-md table">
+                                <table cellPadding={0} cellSpacing={0}>
+                                  <thead>,
+                                    <tr>
+                                      <th>Date</th>
+                                      <th>Transaction ID</th>
+                                      <th>Transaction type</th>
+                                      <th>Transaction amount</th>
+                                      <th>Old Balance</th>
+                                      <th>New Balance</th>
+                                      <th>Action</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td className="text-red" style={{textAlign: 'center'}} colSpan="14">No transaction found</td></tr> 
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                   </aside>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+          <MainFooter/>
+        </div>
+    )
+  }
 }
-export default Transactions;
+const mapStateToProps = state => ({
+  transaction: state.transactionReducer.transaction
+});
+export default connect(mapStateToProps, null)(Transactions);

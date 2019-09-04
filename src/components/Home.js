@@ -8,13 +8,11 @@ import { connect } from 'react-redux';
 import { modalToggle } from '../store/modules/modals/actions';
 
 const Home = (props) => {
-    let modals = props.page === 'signup'? <SignUpModal /> : <SignInModal />
     return (
       <div className="wrapper-home">
         <HomeHeader />
         <HomeContent /> 
         <HomeFooter />
-        { modals }
       </div>
     )
   }
